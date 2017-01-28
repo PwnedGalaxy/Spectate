@@ -3,16 +3,16 @@ package com.chipmunk9998.spectate.api;
 import com.chipmunk9998.spectate.PlayerState;
 import com.chipmunk9998.spectate.Spectate;
 
-import net.minecraft.server.v1_8_R3.EntityPlayer;
-import net.minecraft.server.v1_8_R3.WorldServer;
+import net.minecraft.server.v1_11_R1.EntityPlayer;
+import net.minecraft.server.v1_11_R1.WorldServer;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_8_R3.CraftServer;
-import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_11_R1.CraftServer;
+import org.bukkit.craftbukkit.v1_11_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_11_R1.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
@@ -512,14 +512,14 @@ public class SpectateManager {
             return;
         }
 
-        if (entity.passenger != null) {
+        if (entity.passengers.size() != 0) {
             return;
         }
 
         Location from = p.getLocation();
         Location to = location;
 
-        entity.mount(null);
+        ((net.minecraft.server.v1_11_R1.Entity) entity).stopRiding();
 
         WorldServer fromWorld = ((CraftWorld) from.getWorld()).getHandle();
         WorldServer toWorld = ((CraftWorld) to.getWorld()).getHandle();

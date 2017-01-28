@@ -7,7 +7,7 @@
 
     <groupId>com.Chipmunk9998</groupId>
     <artifactId>Spectate</artifactId>
-    <version>2.3</version>
+    <version>2.4-SNAPSHOT</version>
 
     <repositories>
         <repository>
@@ -34,12 +34,12 @@
         <dependency>
           <groupId>org.spigotmc</groupId>
           <artifactId>spigot-api</artifactId>
-          <version>1.8.8-R0.1-SNAPSHOT</version>
+          <version>1.11.1-R0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
           <groupId>org.spigotmc</groupId>
           <artifactId>spigot</artifactId>
-          <version>1.8.8-R0.1-SNAPSHOT</version>
+          <version>1.11.1-R0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
     
